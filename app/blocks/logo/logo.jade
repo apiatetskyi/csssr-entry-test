@@ -1,0 +1,10 @@
+mixin logo(width, height)
+	+b.logo&attributes(attributes)
+		+e.link(href='#')
+			+e.img(
+				src='assets/images/logo.png'
+				width=width
+				height=height
+				alt='CSSSR Company'
+			)
+		block

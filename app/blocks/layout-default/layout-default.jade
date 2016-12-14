@@ -2,6 +2,8 @@ include /../node_modules/bemto.jade/bemto
 include /../node_modules/jade-injected/jade-injected
 include ../page/page
 include ../page-wrapper/page-wrapper
+include ../page-header/page-header
+include ../logo/logo
 include ../scripts/scripts
 
 doctype html
@@ -9,5 +11,6 @@ html(lang='ru')
 	include ../head/head
 	+page
 		+page-wrapper
+			+page-header
 		block content
 		+scripts(['app.min.js'])
