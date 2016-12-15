@@ -1,6 +1,10 @@
 extends /blocks/layout-default/layout-default
+include /blocks/form/form
+include /blocks/section/section
 
 block head
 	- var pageTitle = 'Aleksei Piatetskyi — CSSSR entry test';
 
 block content
+	+form
+		+section

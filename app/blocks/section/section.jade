@@ -1,0 +1,7 @@
+mixin section(title, desc)
+	+b('fieldset').section&attributes(attributes)
+		if title
+			+e.title= title
+		if desc
+			+e('p').desc= desc
+		block

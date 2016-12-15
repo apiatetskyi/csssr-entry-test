@@ -1,0 +1,10 @@
+mixin page-content()
+	+b('main').page-content&attributes(attributes)
+		+e.title
+			+e.title-img(
+				src='assets/images/blank-title.png'
+				width=215
+				height=110
+				alt='Дело'
+			)
+		block
