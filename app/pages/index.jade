@@ -1,10 +1,18 @@
 extends /blocks/layout-default/layout-default
 include /blocks/form/form
 include /blocks/section/section
+include /blocks/data-row/data-row
 
 block head
 	- var pageTitle = 'Aleksei Piatetskyi — CSSSR entry test';
 
 block content
 	+form
-		+section
+		+section._data
+				+data-row('Полное ФИО', 'Иванов Иван Иванович', 'name')
+				+data-row('Год рождения', '1990', 'year')._year
+				+data-row('Место жительства', 'г. Иваново, Россия', 'location')._location
+				+data-row('Скайп', 'ivanov', 'skype')._skype
+				+data-row('Почта', 'ivanov@gmail.com', 'e-mail')._mail
+		+section._skills
+
