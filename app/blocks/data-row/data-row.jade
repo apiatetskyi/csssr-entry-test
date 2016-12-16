@@ -1,5 +1,5 @@
 mixin data-row(label, value, id)
 	+b.data-row&attributes(attributes)
 		+e('label').label(for=id)= label
-		+e('input').text(id=id type=text value=value)
+		+e('input').text(id=id type='text' value=value)
 		block
