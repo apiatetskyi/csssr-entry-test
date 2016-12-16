@@ -5,13 +5,13 @@ mixin skills-list(skillsList)
 				each skill in column
 					if skill[2]
 						+e.skill-row
-							+e('input').checkbox(id=skill[2] type='checkbox' name=skill[1] checked)
-							+e('label').label(for=id)= skill[0]
+							+e('input').checkbox(id=skill[1]+'-id' type='checkbox' name=skill[1] checked)
+							+e('label').label(for=skill[1]+'-id')= skill[0]
 							if skill[3]
 								+e.link
 									+link(href='http://'+skill[3])= skill[3]
 					else
 						+e.skill-row
-							+e('input').checkbox(id=skill[2] type='checkbox' name=skill[1])
-							+e('label').label(for=id)= skill[0]
+							+e('input').checkbox(id=skill[1]+'-id' type='checkbox' name=skill[1])
+							+e('label').label(for=skill[1]+'-id')= skill[0]
 		block
