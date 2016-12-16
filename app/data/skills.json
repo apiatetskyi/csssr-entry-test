@@ -1,0 +1,47 @@
+[
+	[
+		["БЭМ/OOCSS", "bem", true],
+		["Pug (Jade)", "pug", true],
+		["Stylus/LESS/SASS", "stylus", true],
+		["Работаю с SVG", "svg", false],
+		["Верстаю семантично", "semantics", true],
+		["Accessibility (A11Y)", "accessibility", false],
+		["ES2015/ES2016", "es", false]
+	],
+	[
+		["Gulp/GRUNT", "gulp", true],
+		["Webpack", "webpack", false],
+		["Дружу с WebGL", "webgl", false],
+		["jQuery", "jquery", true],
+		["Знаю/изучаю Angular", "angular", false],
+		["Знаю/изучаю React", "react", false],
+		["Знаю/изучаю Node.js", "node.js", false]
+	],
+	[
+		["Использую Git", "git", true],
+		["С глазомером всё ок", "accuracy", true],
+		["Читаю ", "blog", true, "blog.csssr.ru"],
+		["Я ленивый(-ая)", "lazy", false],
+		["У меня хороший английский", "eng", false]
+	]
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

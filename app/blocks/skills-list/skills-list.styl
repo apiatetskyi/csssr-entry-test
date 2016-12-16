@@ -1,0 +1,51 @@
+.skills-list
+	display flex
+
+	&__column
+		// flex-grow 1
+		flex-basis 250px
+
+	&__column:nth-child(1)
+		margin-left 2px
+
+	&__column:nth-child(2)
+		margin-left 11px
+
+	&__column:nth-child(3)
+		margin-left 25px
+
+	&__checkbox
+		display none
+
+	&__label
+		position relative
+		padding-left 25px
+		padding-bottom 10px
+		display inline-block
+		font-size 21px
+		line-height 25px
+		vertical-align top
+		cursor pointer
+
+		&::before
+			position absolute
+			top 5px
+			left -1px
+			content ''
+			sprite($icon_checkbox)
+
+	&__link
+		display inline-block
+		vertical-align top
+
+	&__checkbox:checked + &__label::before
+		top -3px
+		width 24px
+		height 26px
+		sprite($icon_checkbox_checked)
+
+	&__column:nth-child(2) &__label::before
+		left 2px
+
+	&__column:nth-child(3) &__label::before
+		left 2px
