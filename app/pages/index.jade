@@ -2,6 +2,8 @@ extends /blocks/layout-default/layout-default
 include /blocks/form/form
 include /blocks/section/section
 include /blocks/data-row/data-row
+include /blocks/skills-list/skills-list
+include /blocks/link/link
 
 block head
 	- var pageTitle = 'Aleksei Piatetskyi — CSSSR entry test';
@@ -15,4 +17,10 @@ block content
 				+data-row('Скайп', 'ivanov', 'skype')._skype
 				+data-row('Почта', 'ivanov@gmail.com', 'e-mail')._mail
 		+section._skills
+			+e.title Расскажите о себе чекбоксами
+			+e('p').desc
+				|Отметьте чекбоксами пункты, которые соответствуют вашим скиллам.
+				|Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей.
+				|Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+			+skills-list(getData('skills'))
 
