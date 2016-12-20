@@ -1,0 +1,26 @@
+.option-row
+	display flex
+
+	&__radio
+		display none
+
+	&__label
+		position relative
+		margin-right 21px
+		padding-left 33px
+		font-size 20px
+		line-height 25px
+		cursor pointer
+		color $radio-label_color
+
+		&::before
+			position absolute
+			top -1px
+			left 0
+			content ''
+			sprite($icon_radio)
+
+	&__radio:checked + &__label::before
+		width 24px
+		height 26px
+		sprite($icon_radio_checked)
