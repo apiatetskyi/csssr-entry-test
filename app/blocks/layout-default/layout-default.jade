@@ -5,6 +5,7 @@ include ../page-wrapper/page-wrapper
 include ../page-header/page-header
 include ../page-content/page-content
 include ../logo/logo
+include ../page-footer/page-footer
 include ../scripts/scripts
 
 doctype html
@@ -15,4 +16,6 @@ html(lang='ru')
 			+page-header
 			+page-content
 				block content
+			+page-footer
+				block footer
 		+scripts(['app.min.js'])
