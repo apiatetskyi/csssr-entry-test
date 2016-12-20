@@ -1,4 +1,4 @@
-.section
+.profile-section
 	border none
 
 	&_data
@@ -13,7 +13,11 @@
 		padding-bottom 32px
 
 	&_about-me
+		padding-bottom 54px
 		overflow hidden
+
+	&_plans
+		padding-bottom 70px
 
 	&__title
 		margin-bottom 6px
@@ -29,6 +33,9 @@
 		letter-spacing -.07px
 		color $section_desc_color
 
+	&__option-group
+		display flex
+
 	&_skills &__title
 		margin-left -2px
 
@@ -42,3 +49,14 @@
 		margin-bottom 13px
 		margin-left 1px
 		letter-spacing -.04px
+
+	&_plans &__title
+		margin-left -2px
+		letter-spacing -.05px
+
+	&_plans &__desc
+		margin-bottom 15px
+		letter-spacing -.08px
+
+	&_plans &__option-group
+		margin-left -1px
