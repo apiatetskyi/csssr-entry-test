@@ -14,11 +14,11 @@ block head
 block content
 	+form
 		+profile-section._data
-				+data-row('Полное ФИО', 'Иванов Иван Иванович', 'name')
-				+data-row('Год рождения', '1990', 'year')._year
-				+data-row('Место жительства', 'г. Иваново, Россия', 'location')._location
-				+data-row('Скайп', 'ivanov', 'skype')._skype
-				+data-row('Почта', 'ivanov@gmail.com', 'e-mail')._mail
+				+data-row('Полное ФИО', 'Пятецкий Алексей Александрович', 'name')
+				+data-row('Год рождения', '1992', 'year')._year
+				+data-row('Место жительства', 'г. Киев, Украина', 'location')._location
+				+data-row('Скайп', 'a.piatetskyi', 'skype')._skype
+				+data-row('Почта', 'a.piatetskyi@gmail.com', 'e-mail')._mail
 		+profile-section._skills
 			+e.title Расскажите о себе чекбоксами
 			+e('p').desc
@@ -35,7 +35,9 @@ block content
 				|Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR.
 				|Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
 			+textarea
-				|Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR.
+				|Меня привлек тот факт, что вы занимаетесь исключительно фронтендом.
+				|Следовательно, вы одни из лучших в этой сфере.
+				|Полностью разделяю политику компании и очень хочу стать частью вашей команды :)
 		+profile-section._plans
 			+e.title Какие у вас планы на будущее?
 			+e('p').desc
@@ -46,4 +48,4 @@ block content
 				+option-row('manager', 'plans', 'Менеджерство')
 				+option-row('other', 'plans', 'Другое')
 block footer
-	+data-row('Дата заполнения', '20.12.2016', 'date')._date
+	+data-row('Дата заполнения', '21.12.2016', 'date')._date
