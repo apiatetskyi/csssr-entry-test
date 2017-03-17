@@ -1,0 +1,11 @@
+mixin textfield(textfieldData)
+	- textfieldData = textfieldData || {};
+	+b.textfield&attributes(attributes)
+		+e('label').label(for=textfieldData.id)= textfieldData.label
+		+e('input').input(
+			id=textfieldData.id
+			type='text'
+			name=textfieldData.name
+			value=textfieldData.value
+		)
+		block

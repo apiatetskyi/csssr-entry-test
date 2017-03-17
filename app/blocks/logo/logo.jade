@@ -1,10 +1,10 @@
-mixin logo(width, height)
-	+b.logo&attributes(attributes)
-		+e.link(href='http://csssr.ru/')
-			+e.img(
-				src='assets/images/logo.png'
-				width=width
-				height=height
-				alt='CSSSR Company'
-			)
+mixin logo(logoData)
+	- logoData = logoData || {};
+	+b.logo(href='http://csssr.ru/')&attributes(attributes)
+		+e.img(
+			src=logoData.src || 'assets/images/logo.png'
+			width=logoData.width
+			height=logoData.height
+			alt=logoData.alt || 'CSSSR Company'
+		)
 		block

@@ -1,0 +1,20 @@
+mixin radio(radioData)
+	- radioData = radioData || {};
+	+b.radio&attributes(attributes)
+		if radioData.checked
+			+e('input').input(
+				id=radioData.id
+				type='radio'
+				name=radioData.name
+				value=radioData.value
+				checked
+			)
+		else
+			+e('input').input(
+				id=radioData.id
+				type='radio'
+				name=radioData.name
+				value=radioData.value
+			)
+		+e('label').label(for=radioData.id)= radioData.label
+		block

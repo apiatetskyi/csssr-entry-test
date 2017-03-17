@@ -1,0 +1,29 @@
+.checkbox
+
+	&__input
+		display none
+
+	&__label
+		position relative
+		padding-left 25px
+		display inline-block
+		font-size 21px
+		line-height 25px
+		vertical-align top
+		letter-spacing -.07px
+		cursor pointer
+		user-select none
+		color $checkbox-label_color
+
+		&::before
+			position absolute
+			top 5px
+			left -1px
+			content ''
+			sprite($icon_checkbox)
+
+	&__input:checked + &__label::before
+		top -3px
+		width 24px
+		height 26px
+		sprite($icon_checkbox_checked)

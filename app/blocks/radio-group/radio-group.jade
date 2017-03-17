@@ -1,0 +1,14 @@
+mixin radio-group(groupData)
+	- groupData = groupData || {};
+	+b('ul').radio-group&attributes(attributes)
+		- for (var i = 0; i < groupData.options.length; i++){
+			+e('li').item
+				+radio({
+					label: groupData.options[i].label,
+					id: groupData.options[i].id,
+					value: groupData.options[i].value,
+					checked: groupData.options[i].checked,
+					name: groupData.name
+				})
+		- }
+		block

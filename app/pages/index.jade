@@ -1,51 +1,55 @@
 extends /blocks/layout-default/layout-default
+include /blocks/logo/logo
 include /blocks/form/form
-include /blocks/profile-section/profile-section
-include /blocks/data-row/data-row
-include /blocks/skills-list/skills-list
+include /blocks/section/section
+include /blocks/textfield/textfield
+include /blocks/checkbox/checkbox
+include /blocks/radio/radio
+include /blocks/radio-group/radio-group
 include /blocks/link/link
+include /blocks/skills/skills
 include /blocks/slider/slider
 include /blocks/textarea/textarea
-include /blocks/option-row/option-row
 
 block head
 	- var pageTitle = 'Aleksei Piatetskyi — CSSSR entry test';
 
 block content
-	+form
-		+profile-section._data
-				+data-row('Полное ФИО', 'Пятецкий Алексей Александрович', 'name')
-				+data-row('Год рождения', '1992', 'year')._year
-				+data-row('Место жительства', 'г. Киев, Украина', 'location')._location
-				+data-row('Скайп', 'a.piatetskyi', 'skype')._skype
-				+data-row('Почта', 'a.piatetskyi@gmail.com', 'e-mail')._mail
-		+profile-section._skills
-			+e.title Расскажите о себе чекбоксами
+	+form(action='#' method='post')
+		+section.form__user-data
+			+textfield({label:'Полное ФИО', value:'Пятецкий Алексей Александрович', id:'name', name:'name'})
+			+textfield({label:'Год рождения', value:'1992', id:'year', name:'year'})
+			+textfield({label:'Место жительства', value:'г. Киев, Украина', id:'location', name:'location'})
+			+textfield({label:'Скайп', value:'a.piatetskyi', id:'skype', name:'skype'})
+			+textfield({label:'Почта', value:'a.piatetskyi@gmail.com', id:'e-mail', name:'e-mail'})
+		+section.form__skills
+			+e('legend').title Расскажите о себе чекбоксами
 			+e('p').desc
 				|Отметьте чекбоксами пункты, которые соответствуют вашим скиллам.
 				|Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей.
 				|Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
-			+skills-list(getData('skills'))
-		+profile-section._js-lvl
-			+e.title Уровень владения JavaScript
+			+skills(getData('skills'))
+		+section._type_js.form__js
+			+e('legend').title Уровень владения JavaScript
 			+slider
-		+profile-section._about-me
-			+e.title Расскажите о себе словами
+		+section._type_message.form__message
+			+e('legend').title Расскажите о себе словами
 			+e('p').desc
 				|Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR.
 				|Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
 			+textarea
-				|Меня привлек тот факт, что вы занимаетесь исключительно фронтендом.
-				|Следовательно, вы одни из лучших в этой сфере.
-				|Полностью разделяю политику компании и очень хочу стать частью вашей команды :)
-		+profile-section._plans
-			+e.title Какие у вас планы на будущее?
+		+section._type_plans.form__plans
+			+e('legend').title Какие у вас планы на будущее?
 			+e('p').desc
 				|Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
-			+e.option-group
-				+option-row('html_css', 'plans', 'Верстать')(checked)
-				+option-row('js', 'plans', 'Прокачиваться в JS')
-				+option-row('manager', 'plans', 'Менеджерство')
-				+option-row('other', 'plans', 'Другое')
-block footer
-	+data-row('Дата заполнения', '21.12.2016', 'date')._date
+			+radio-group({
+				options:[
+					{label:'Верстать', id:'markup', value:'Верстать', checked:true},
+					{label:'Прокачиваться в JS', id:'js', value:'Верстать'},
+					{label:'Менеджерство', id:'manager', value:'Верстать'},
+					{label:'Другое', id:'other', value:'Верстать'}
+				],
+				name:'plans'
+			})
+		+section.form__date
+			+textfield({label:'Дата заполнение', value:'20.01.2017', id:'date', name:'date'})._type_date

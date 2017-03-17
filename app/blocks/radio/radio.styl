@@ -1,7 +1,7 @@
-.option-row
+.radio
 	display flex
 
-	&__radio
+	&__input
 		display none
 
 	&__label
@@ -11,6 +11,7 @@
 		font-size 20px
 		line-height 25px
 		cursor pointer
+		user-select none
 		color $radio-label_color
 
 		&::before
@@ -20,7 +21,7 @@
 			content ''
 			sprite($icon_radio)
 
-	&__radio:checked + &__label::before
+	&__input:checked + &__label::before
 		width 24px
 		height 26px
 		sprite($icon_radio_checked)

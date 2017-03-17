@@ -1,5 +1,0 @@
-mixin option-row(id, name, label)
-	+b.option-row
-		+e('input').radio(id=id type='radio' name=name value=label)&attributes(attributes)
-		+e('label').label(for=id)= label
-		block

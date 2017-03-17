@@ -1,11 +1,12 @@
 mixin slider()
 	+b.slider&attributes(attributes)
-		+e.lvl-mark_null
+		+e('input')#sliderInput(type='hidden')
+		+e.mark_lvl_null
 			|Не владею
-		+e.lvl-mark_low
+		+e.mark_lvl_low
 			|Использую готовые решения
-		+e.lvl-mark_medium
-			|Использую готовые решения и умею их переделывать
-		+e.lvl-mark_high
+		+e.mark_lvl_medium
+			|Использую готовые решения и&nbsp;умею их переделывать
+		+e.mark_lvl_high
 			|Пишу сложный JS с нуля
 		block

@@ -1,3 +1,4 @@
-mixin link(href, text)
-	+b('a').link(href=href)&attributes(attributes)= text
+mixin link(linkData)
+	- linkData = linkData || {};
+	+b('a').link(href=linkData.href)&attributes(attributes)= linkData.text
 		block

@@ -1,11 +1,18 @@
 .link
+	position relative
 	font-size 21px
 	line-height 25px
+	text-decoration none
 	color $link_color
+
+	&::after
+		position absolute
+		right -1px
+		left -1px
+		bottom 1px
+		height 1px
+		content ''
+		background-color $link_color
 
 	&:hover
 		color $link_hover
-
-	&_checkbox
-		align-self baseline
-		margin-left 5px

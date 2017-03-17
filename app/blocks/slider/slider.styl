@@ -4,6 +4,9 @@
 	position relative
 	min-height 80px
 	background-color transparent
+	background-image url('../images/bg-slider.png')
+	background-repeat no-repeat
+	background-position right 16px
 	border none
 	box-shadow none
 
@@ -12,9 +15,6 @@
 		width 766px
 		height 20px
 		cursor pointer
-		background-image url('../images/bg-slider.png')
-		background-repeat no-repeat
-		background-position right bottom
 
 	.noUi-handle
 		top -1px
@@ -28,7 +28,7 @@
 		&::before, &::after
 			display none
 
-	&__lvl-mark
+	&__mark
 		position absolute
 		font-size 13px
 		line-height 19px
@@ -40,7 +40,7 @@
 			content ''
 			background $lvl-mark_color
 
-		&_null
+		&_lvl_null
 			top 46px
 			left -1px
 
@@ -49,7 +49,7 @@
 				left 1px
 				height 25px
 
-		&_low
+		&_lvl_low
 			top 44px
 			left 144px
 
@@ -58,17 +58,17 @@
 				left 5px
 				height 12px
 
-		&_medium
+		&_lvl_medium
 			top 44px
 			left 371px
-			width 175px
+			width 195px
 
 			&::before
 				top -27px
 				left 3px
 				height 12px
 
-		&_high
+		&_lvl_high
 			top 51px
 			right 0
 

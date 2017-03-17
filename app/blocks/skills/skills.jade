@@ -1,0 +1,14 @@
+mixin skills(skillsData)
+	+b.skills&attributes(attributes)
+		each column in skillsData
+			+e.column
+				each skill in column
+					+e.item
+						if skill[2]
+							+checkbox({label:skill[0], id:skill[1]+'Id', name:skill[1], checked:skill[2]})
+						else
+							+checkbox({label:skill[0], id:skill[1]+'Id', name:skill[1]})
+						if skill[3]
+							+e.link
+								+link({href:'http://'+skill[3], text:skill[3]})
+		block

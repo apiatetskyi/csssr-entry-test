@@ -1,10 +1,17 @@
 mixin page-header()
 	+b('header').page-header&attributes(attributes)
-		+logo(143, 35)
+		+e.logo
+			+logo({width:143, height:35})
 		+e.stamp(
 			src='assets/images/stamp.png'
 			width=252
 			height=106
 			alt='Секретно'
 		)
+		+e.profile-name(
+				src='assets/images/blank-title.png'
+				width=215
+				height=110
+				alt='Дело'
+			)
 		block
